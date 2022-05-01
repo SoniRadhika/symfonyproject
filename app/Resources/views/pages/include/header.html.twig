@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Post Crud</title>
+        <link rel="stylesheet"  href="{{ absolute_url(asset('css/bootstrap.min.css')) }}" />
+        <link rel="stylesheet"  href="{{ absolute_url(asset('css/bootstrap.css')) }}" />
+
+    </head>
+
+    <body>
+       <div class="container-fluid"><br>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+ 
+    <a class="navbar-brand" href="#">Posts Crud Project</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+</nav>
+</div>
+
+{% for success_message in app.Session.flashbag.get('message') %}
+  <div class="alert alert-success">{{ success_message}}</div>
+{% endfor %}
